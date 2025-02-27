@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>密码生成器</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-md w-96">
+        <h1 class="text-2xl font-bold mb-4">密码生成器</h1>
+        <div>
+            <label for="length" class="block mb-2">密码长度:</label>
+            <input type="number" id="length" min="8" max="20" value="12" class="border rounded p-2 w-full">
+        </div>
+        <div class="mt-4">
+            <label class="block mb-2">字符类型:</label>
+            <label><input type="checkbox" id="uppercase" checked> 大写字母</label><br>
+            <label><input type="checkbox" id="lowercase" checked> 小写字母</label><br>
+            <label><input type="checkbox" id="numbers" checked> 数字</label><br>
+            <label><input type="checkbox" id="special" checked> 特殊字符</label>
+        </div>
+        <button id="generate" class="bg-blue-500 text-white rounded p-2 mt-4 w-full">生成密码</button>
+        <div class="mt-4">
+            <label class="block mb-2">生成的密码:</label>
+            <input type="text" id="password" readonly class="border rounded p-2 w-full">
+            <button id="copy" class="bg-green-500 text-white rounded p-2 mt-2 w-full">复制到剪贴板</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
